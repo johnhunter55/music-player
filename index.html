@@ -13,31 +13,38 @@
   </head>
   <body class="w-full h-screen flex justify-center bg-neutral-900 items-center">
     <div
-      class="w-xl flex items-center flex-col justify-center py-20 bg-neutral-800 rounded-lg shadow-2xl/100 transition duration-500 shadow-emerald-800"
+      id="container"
+      class="w-3xl gap-20 flex items-center justify-center py-20 bg-neutral-800 rounded-lg shadow-2xl/100 transition duration-500 shadow-emerald-800"
     >
+      <img
+        id="album-art"
+        class="w-64 h-64 rounded-md mb-6 shadow-lg object-cover"
+      />
       <div>
-        <h1 class="text-white font-bold text-xl">Currently playing:</h1>
-        <h1 id="current-song" class="text-mist-300"></h1>
-      </div>
-      <div class="flex mt-10 gap-2">
-        <button
-          id="btn-prev"
-          class="hover:shadow-sm/50 transition delay-10 duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-102 py-2 px-4 flex items-center bg-emerald-800 font-medium text-emerald-50 rounded-lg cursor-pointer hover:bg-emerald-700"
-        >
-          <span class="material-symbols-outlined"> chevron_left </span>
-        </button>
-        <button
-          id="btn-play"
-          class="hover:shadow-sm/50 transition delay-10 duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-102 py-2 px-4 flex items-center bg-emerald-800 font-medium text-emerald-50 rounded-lg cursor-pointer hover:bg-emerald-700"
-        >
-          <span class="material-symbols-outlined"> play_arrow </span>
-        </button>
-        <button
-          id="btn-next"
-          class="hover:shadow-sm/50 transition delay-10 duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-102 py-2 px-4 flex items-center bg-emerald-800 font-medium text-emerald-50 rounded-lg cursor-pointer hover:bg-emerald-700"
-        >
-          <span class="material-symbols-outlined"> chevron_right </span>
-        </button>
+        <div class="flex flex-col w-64">
+          <h1 class="text-white font-bold text-xl">Currently playing:</h1>
+          <h1 id="current-song" class="text-mist-300"></h1>
+        </div>
+        <div class="flex mt-10 gap-2">
+          <button
+            id="btn-prev"
+            class="hover:shadow-sm/50 transition delay-10 duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-102 py-2 px-4 flex items-center bg-emerald-800 font-medium text-emerald-50 rounded-lg cursor-pointer hover:bg-emerald-700"
+          >
+            <span class="material-symbols-outlined"> chevron_left </span>
+          </button>
+          <button
+            id="btn-play"
+            class="hover:shadow-sm/50 transition delay-10 duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-102 py-2 px-4 flex items-center bg-emerald-800 font-medium text-emerald-50 rounded-lg cursor-pointer hover:bg-emerald-700"
+          >
+            <span class="material-symbols-outlined"> play_arrow </span>
+          </button>
+          <button
+            id="btn-next"
+            class="hover:shadow-sm/50 transition delay-10 duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-102 py-2 px-4 flex items-center bg-emerald-800 font-medium text-emerald-50 rounded-lg cursor-pointer hover:bg-emerald-700"
+          >
+            <span class="material-symbols-outlined"> chevron_right </span>
+          </button>
+        </div>
       </div>
     </div>
     <div id="app"></div>

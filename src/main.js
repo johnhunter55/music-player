@@ -55,23 +55,48 @@ class DoublyLinkedList {
 
 const playlist = new DoublyLinkedList();
 
-playlist.append({ title: "I THINK - Tyler, The Creator", color: "pink" });
-playlist.append({ title: "STAY HERE 4 LIFE - A$AP Rocky", color: "blue" });
-playlist.append({ title: "2000 EXCURSION - Travis Scott", color: "zinc" });
-playlist.append({ title: "PURPLE RAIN - Don Toliver", color: "indigo" });
-playlist.append({ title: "Ladders - Mac Miller", color: "taupe" });
+playlist.append({
+  title: "I THINK - Tyler, The Creator",
+  color: "pink",
+  image:
+    "https://upload.wikimedia.org/wikipedia/en/5/51/Igor_-_Tyler%2C_the_Creator.jpg",
+});
+playlist.append({
+  title: "STAY HERE 4 LIFE - A$AP Rocky",
+  color: "blue",
+  image:
+    "https://media.pitchfork.com/photos/696a9716019618f4a187ec3d/1:1/w_450%2Cc_limit/ASAP%2520Rocky%2520-%2520Don't%2520Be%2520Dumb%2520cover%2520art.jpg",
+});
+playlist.append({
+  title: "2000 EXCURSION - Travis Scott",
+  color: "zinc",
+  image: "https://i.scdn.co/image/ab67616d00001e0218325ce9b2c009de5dc8f9fd",
+});
+playlist.append({
+  title: "PURPLE RAIN - Don Toliver",
+  color: "indigo",
+  image: "https://i1.sndcdn.com/artworks-0j5o24nKUp2Q-0-t500x500.jpg",
+});
+playlist.append({
+  title: "Ladders - Mac Miller",
+  color: "taupe",
+  image:
+    "https://images.genius.com/8bfb418599d42aa088e66b5437a87374.1000x1000x1.jpg",
+});
 
 const display = document.getElementById("current-song");
+const albumArt = document.getElementById("album-art");
 const playBtn = document.getElementById("btn-play");
 const prevBtn = document.getElementById("btn-prev");
 const nextBtn = document.getElementById("btn-next");
-const container = document.querySelector(".w-xl");
+const container = document.getElementById("container");
 
 let currentColor = "emerald";
 
 function updateDisplay() {
   const song = playlist.getCurrent();
   display.innerText = song.title;
+  albumArt.src = song.image;
   playBtn.querySelector("span").innerText = playlist.isPlaying
     ? "pause"
     : "play_arrow";
