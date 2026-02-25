@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <title>music-player</title>
+  </head>
+  <body class="w-full h-screen flex justify-center items-center">
+    <div
+      class="px-40 py-20 bg-mist-700 rounded-lg shadow-2xl/100 shadow-emerald-800"
+    >
+      <div>
+        <h1 class="text-white font-bold text-xl">Currently playing:</h1>
+        <h1 id="current-song"></h1>
+      </div>
+      <div class="flex mt-10 gap-2">
+        <button
+          class="py-2 px-4 flex items-center bg-emerald-800 font-medium text-emerald-50 rounded-lg cursor-pointer hover:bg-emerald-900"
+        >
+          <span class="material-symbols-outlined"> chevron_left </span>
+        </button>
+        <button
+          class="py-2 px-4 flex items-center bg-emerald-800 font-medium text-emerald-50 rounded-lg cursor-pointer hover:bg-emerald-900"
+        >
+          <span class="material-symbols-outlined"> play_arrow </span>
+        </button>
+        <button
+          class="py-2 px-4 flex items-center bg-emerald-800 font-medium text-emerald-50 rounded-lg cursor-pointer hover:bg-emerald-900"
+        >
+          <span class="material-symbols-outlined"> chevron_right </span>
+        </button>
+      </div>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
